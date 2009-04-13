@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block body %}
+<p>The short URL <span class="shorturl">{{stored_url.short_version|escape}}</span>
+pointed to <span class="canonical">{{stored_url.canonical|escape}}</span>
+on <span class="timestamp">{{stored_url.date}}</span>.</p>
+
+<p>This fact has been recorded for the ages.</p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p>tinyarchive.org is a publicly accessible archive of shortened URLs and their
+  destinations over time.</p>
+
+{% include "base_newurl.html" %}
+
+<p class="text">What happens when you tinyarchive a URL is that a HEAD request is made to
+the URL in question, and if the HTTP response code is 301 (permanent
+redirect) or 302 (temporary redirect), then the shortened URL is stored along
+with the target URL and time-stamped.</p>
+
+<p class="text">At some point in the future, when tinyurl and bit.ly are lost to the annals,
+you can check the annals (this site) and find out where a shortened URL used
+to point, and go there. Or archive.org if the original site doesn't exist
+anymore.</p>
+
+{% include "base_searchurl.html" %}
+
+{% endblock %}

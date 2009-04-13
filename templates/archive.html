@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body %}
+<dl style="text-align: left">
+{% for result in results %}
+  <dt><a alt="short" href="{{result.short_version|escape}}">{{result.short_version|escape}}</a></dt>
+  <dd><a rel="canonical" href="{{result.canonical|escape}}">{{result.canonical|escape}}</a></dd>
+{% endfor %}
+</dl>
+
+{% endblock %}

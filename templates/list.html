@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if short_matches.count %}
+<h3>{{url|escape}} was a shortened version of:</h3>
+<ul>
+{% for result in short_matches %}
+<li><a href="{{result.canonical}}">{{result.canonical|escape}}</a> (as of {{result.date}})</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if long_matches.count %}
+<h3>{{url|escape}} was shortened to:</h3>
+<ul>
+{% for result in long_matches %}
+<li><a href="{{result.short_version}}">{{result.short_version|escape}}</a> (as of {{result.date}})</li>
+{% endfor %}
+</ul>
+
+{% endif %}
+
+
+{% endblock %}

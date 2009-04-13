@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<p>Hi there! We've already checked {{url|escape}} once this week, so we're
+  politely declining to do so again. If you'd like to try next week, please be
+  our guest! In the meantime, you can check to see if {{url|escape}} exists in
+  our records anywhere by checking <a href="/url?url={{url|escape}}">here</a>.</p>
+
+{% endblock %}
